@@ -1,3 +1,12 @@
+<?php
+require_once "../src/funcoes-alunos.php";
+$listaDeAlunos = lerAlunos($conexao);
+
+// Chamada de função para teste que retorna array
+ dump($listaDeAlunos);
+?>
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
