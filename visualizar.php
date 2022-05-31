@@ -1,9 +1,9 @@
 <?php
-require_once "../src/funcoes-alunos.php";
+require_once "src/funcoes-alunos.php";
 $listaDeAlunos = lerAlunos($conexao);
 
 // Chamada de função para teste que retorna array
- dump($listaDeAlunos);
+ // dump($listaDeAlunos);
 ?>
 
 
@@ -21,6 +21,50 @@ $listaDeAlunos = lerAlunos($conexao);
     <hr>
     <p><a href="inserir.php">Inserir novo aluno</a></p>
 
+    <table>
+            <caption>Lista de Alunos</caption>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Nota 1</th>
+                    <th>Nota 2</th>
+                    <th>Média</th>
+                    <th>Situação</th>
+                    <th colspan="2">Operações</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php
+                 
+                    // echo "<pre>";
+                    // var_dump($resultado); // Teste
+                    // echo "<pre>";
+
+                    foreach($listaDeAlunos as $aluno) { ?>
+                    <tr>
+
+                        <td>  <?=$aluno['nome']?> </td>
+                        <td>  <?=$aluno['primeira_nota']?> </td>
+                        <td>  <?=$aluno['segunda_nota']?> </td>
+                        <td>  <?=$aluno['media']?> </td>
+                        <td>  <?=$aluno['situacao']?> </td>
+
+                        <!-- Link dinânmico -->
+                        <td><a href="atualizar.php?id=<?=$aluno['id']?>" style ="color:blue;">Atualizar</a></td>
+                        <td><a class="excluir" href="excluir.php?id=<?=$aluno['id']?>" style ="color:red;">Excluir</a></td>
+
+                        <!-- Solução mais simples para perguntar antes de excluir-->
+                        <!-- Colocar depois do <a: onclick="return confirm('Deseja excluir o item ?')" -->
+                        
+                    </tr>
+                            
+                    <?php } ?>
+        
+            </tbody>
+        </table>
+
+
    <!-- Aqui você deverá criar o HTML que quiser e o PHP necessários
 para exibir a relação de alunos existentes no banco de dados.
 
@@ -30,6 +74,8 @@ as páginas de atualização e exclusão. -->
 
     <p><a href="index.php">Voltar ao início</a></p>
 </div>
+    <!-- Chamando arquivo js para perguntar antes de excluir -->
+    <script src="js/confirm.js"></script>
 
 </body>
 </html>

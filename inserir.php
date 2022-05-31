@@ -13,10 +13,13 @@ if(isset($_POST['inserir'])){
     // $situacao = filter_input(INPUT_POST, 'situacao', FILTER_SANITIZE_SPECIAL_CHARS);
 
     // Chamando a função e passando os dados de conexão e o nome digitado
-    inserirAluno($conexao, $nome, $primeira_nota, $segunda_nota);
+
+    $media= calculaMedia($primeira_nota, $segunda_nota);
+    $situacao= calculaSituacao($media);
+    inserirAluno($conexao, $nome, $primeira_nota, $segunda_nota, $media, $situacao);
 
     // Redirecionamento (Nada a ver com a Tag do HTML)
-    header("location:listar.php");
+    header("location:visualizar.php");
 
 }
 ?>
