@@ -41,8 +41,12 @@ $listaDeAlunos = lerAlunos($conexao);
                     // var_dump($resultado); // Teste
                     // echo "<pre>";
 
-                    foreach($listaDeAlunos as $aluno) { ?>
-                    <tr>
+                    foreach($listaDeAlunos as $aluno) { 
+
+                   $class = corTabela($aluno['media']);
+                        ?>
+                    
+                    <tr class = '<?=$class?>'>
 
                         <td>  <?=$aluno['nome']?> </td>
                         <td>  <?=$aluno['primeira_nota']?> </td>

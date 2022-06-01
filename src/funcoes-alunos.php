@@ -107,7 +107,17 @@ function calculaSituacao ($media) {
     }
     return $situacao;
 }
+// __________________________________________________
 
+function corTabela ($media) {
+    if ($media >=7){
+        $class= "verde";
+    } else {
+        $class= "vermelho";
+    }
+    return $class;
+}
+// __________________________________________________
 
 function calculaMedia (float $n1, float $n2): float {
     // Variável Local

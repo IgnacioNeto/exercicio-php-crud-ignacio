@@ -16,3 +16,11 @@ a {
 h2 a { font-size: 0.9rem;}
 
 a:hover, a:focus { text-decoration: underline;}
+
+.verde{
+    background-color:rgb(125, 224, 125);
+ }
+
+ .vermelho{
+    background-color:rgb(230, 129, 129);
+ }
