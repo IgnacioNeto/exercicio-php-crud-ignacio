@@ -14,15 +14,19 @@ $listaDeAlunos = lerAlunos($conexao);
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lista de alunos - Exercício CRUD com PHP e MySQL</title>
 <link href="css/style.css" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css-bootstrap/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 </head>
 <body>
 <div class="container">
-    <h1>Lista de alunos</h1>
+    <h1 class="text-center">Lista de alunos</h1>
     <hr>
-    <p><a href="inserir.php">Inserir novo aluno</a></p>
 
-    <table>
-            <caption>Lista de Alunos</caption>
+    <table class="table">
+            <!-- <caption class="text-center">Lista de Alunos</caption> -->
             <thead>
                 <tr>
                     <th>Nome</th>
@@ -52,11 +56,11 @@ $listaDeAlunos = lerAlunos($conexao);
                         <td>  <?=$aluno['primeira_nota']?> </td>
                         <td>  <?=$aluno['segunda_nota']?> </td>
                         <td>  <?=$aluno['media']?> </td>
-                        <td>  <?=$aluno['situacao']?> </td>
+                        <td>  <b> <?=$aluno['situacao']?></b> </td>
 
                         <!-- Link dinânmico -->
-                        <td><a href="atualizar.php?id=<?=$aluno['id']?>" style ="color:blue;">Atualizar</a></td>
-                        <td><a class="excluir" href="excluir.php?id=<?=$aluno['id']?>" style ="color:red;">Excluir</a></td>
+                        <td><a class="btn btn-primary" href="atualizar.php?id=<?=$aluno['id']?>">Atualizar</a></td>
+                        <td><a class="excluir btn btn-danger" href="excluir.php?id=<?=$aluno['id']?>">Excluir</a></td>
 
                         <!-- Solução mais simples para perguntar antes de excluir-->
                         <!-- Colocar depois do <a: onclick="return confirm('Deseja excluir o item ?')" -->
@@ -76,10 +80,18 @@ Obs.: não se esqueça de criar também os links dinâmicos para
 as páginas de atualização e exclusão. -->
 
 
-    <p><a href="index.php">Voltar ao início</a></p>
+    <div class="row mt-5 ">
+        <p class="col text-end"><a class="btn btn-primary" href="index.php">Voltar ao início</a></p>
+        <p class="col"><a class="btn btn-primary" href="inserir.php">Inserir novo aluno</a></p>
+    </div>
+
 </div>
     <!-- Chamando arquivo js para perguntar antes de excluir -->
     <script src="js/confirm.js"></script>
+
+    <!-- _______________________________________________________________________ -->
+<!-- Bootstrap JS -->
+<script src="js-bootstrap/bootstrap.bundle.js"></script>  
 
 </body>
 </html>

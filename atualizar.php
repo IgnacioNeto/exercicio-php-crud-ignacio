@@ -63,10 +63,10 @@ if(isset($_POST['atualizar'])){
 	    <input value="<?=$aluno['nome']?>" type="text" name="nome" id="nome" required></p>
         
         <p><label for="primeira">Primeira nota:</label>
-	    <input value="<?=$aluno['primeira_nota']?>" name="primeira_nota" type="number" id="primeira" step="0.1" min="0.0" max="10" required></p>
+	    <input value="<?=$aluno['primeira_nota']?>" name="primeira_nota" type="number" id="primeira" step="0.1" min="0.0" max="10" required oninput="pegarNota()"></p>
 
         <p><label for="segunda">Segunda nota:</label>
-	    <input value="<?=$aluno['segunda_nota']?>" name="segunda_nota" type="number" id="segunda" step="0.1" min="0.0" max="10" required></p>
+	    <input value="<?=$aluno['segunda_nota']?>" name="segunda_nota" type="number" id="segunda" step="0.1" min="0.0" max="10" required oninput="pegarNota()"></p>
 
         <p>
         <!-- Campo somente leitura e desabilitado para edição.
@@ -89,6 +89,9 @@ if(isset($_POST['atualizar'])){
     <p><a href="visualizar.php">Voltar à lista de alunos</a></p>
 
 </div>
+
+    <!-- Chamando arquivo js para perguntar antes de excluir -->
+    <script src="js/confirm.js"></script>
 
 
 </body>
