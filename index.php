@@ -15,13 +15,13 @@
 <div class="container-fluid bg-primary mt-5 text-white">
 
 <div class="containerb">
-    <h1 class="text-center">Exercício - CRUD com PHP e MySQL</h1>
+    <h1 class="text-center text-dark ">Exercício - CRUD com PHP e MySQL</h1>
     <hr>
     <h2 class="text-center">Gerenciamento de alunos, notas, médias e aprovação/reprovação</h2>
     <hr>
     <ul class="text-center">
-        <li><a class="text-white" href="visualizar.php">Visualizar Alunos</a></li>
-        <li><a class="text-white" href="inserir.php">Inserir novo aluno</a></li>
+        <li> <i class="bi bi-eye-fill"></i> <a class="text-white" href="visualizar.php">Visualizar Alunos</a></li>
+        <li> <i class="bi bi-person-plus-fill"></i> <a class="text-white" href="inserir.php">Inserir novo aluno</a></li>
     </ul>
 </div>
 
@@ -77,15 +77,6 @@
       </div>
 
 
-    </div>
-
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>&copy; 2022 Company, Inc. All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"/></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"/></svg></a></li>
-        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"/></svg></a></li>
-      </ul>
     </div>
   </footer>
 </div>

@@ -9,8 +9,6 @@ if(isset($_POST['inserir'])){
     $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
     $primeira_nota = filter_input(INPUT_POST, 'primeira_nota', FILTER_SANITIZE_NUMBER_INT);
     $segunda_nota = filter_input(INPUT_POST, 'segunda_nota', FILTER_SANITIZE_NUMBER_INT);
-    // $media = filter_input(INPUT_POST, 'media', FILTER_SANITIZE_NUMBER_INT);
-    // $situacao = filter_input(INPUT_POST, 'situacao', FILTER_SANITIZE_SPECIAL_CHARS);
 
     // Chamando a função e passando os dados de conexão e o nome digitado
 
@@ -32,6 +30,11 @@ if(isset($_POST['inserir'])){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cadastrar um novo aluno - Exercício CRUD com PHP e MySQL</title>
 <link href="css/style.css" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css-bootstrap/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 </head>
 <body>
 <div class="container">
@@ -50,12 +53,20 @@ if(isset($_POST['inserir'])){
 	    <p><label for="segunda">Segunda nota:</label>
 	    <input type="number" name="segunda_nota" id="segunda_nota" step="0.1" min="0.0" max="10" required></p>
 	    
-      <button type="submit" name="inserir">Cadastrar aluno</button>
+      <button class="btn btn-success" type="submit" name="inserir">Cadastrar aluno</button>
 	</form>
 
     <hr>
-    <p><a href="index.php">Voltar ao início</a></p>
+
+    <div class="row mt-5 ">
+        <p class="col text-start"><a class="btn btn-primary" href="index.php">Voltar ao início</a></p>
+    </div>
+
 </div>
+
+<!-- _______________________________________________________________________ -->
+<!-- Bootstrap JS -->
+<script src="js-bootstrap/bootstrap.bundle.js"></script>  
 
 </body>
 </html>

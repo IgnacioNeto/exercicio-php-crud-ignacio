@@ -23,14 +23,6 @@ if(isset($_POST['atualizar'])){
     $media= calculaMedia($primeira_nota, $segunda_nota);
     $situacao= calculaSituacao($media);
 
-// ________________________(Verificar se precisa sanitizar)
-
-    // $media = filter_input(INPUT_POST, 'media', FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-    // $situacao = filter_input(INPUT_POST, 'situacao', FILTER_SANITIZE_SPECIAL_CHARS);
-
-    // $media = filter_input(INPUT_POST, $media, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-    // $situacao = filter_input(INPUT_POST, $situacao, FILTER_SANITIZE_SPECIAL_CHARS);
-
     // Chamando a função e passando os dados de conexão e o nome digitado
     atualizarAluno($conexao, $id, $nome, $primeira_nota, $segunda_nota, $media, $situacao);
 
@@ -49,6 +41,11 @@ if(isset($_POST['atualizar'])){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Atualizar dados - Exercício CRUD com PHP e MySQL</title>
 <link href="css/style.css" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="css-bootstrap/bootstrap.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+
 </head>
 <body>
 <div class="container">
@@ -82,16 +79,23 @@ if(isset($_POST['atualizar'])){
 	        <input value="<?=$aluno['situacao']?>" type="text" name="situacao" id="situacao" readonly disabled>
         </p>
 	    
-        <button type="submit" name="atualizar">Atualizar dados do aluno</button>
+        <button class="btn btn-warning" type="submit" name="atualizar">Atualizar dados do aluno</button>
 	</form>    
     
     <hr>
-    <p><a href="visualizar.php">Voltar à lista de alunos</a></p>
+
+    <div class="row mt-5">
+        <p class="col text-start"><a class="btn btn-primary" href="visualizar.php">Voltar à lista de alunos</a></p>
+    </div>
 
 </div>
 
-    <!-- Chamando arquivo js para perguntar antes de excluir -->
-    <script src="js/confirm.js"></script>
+<!-- Chamando arquivo js para perguntar antes de excluir -->
+<script src="js/confirm.js"></script>
+
+<!-- _______________________________________________________________________ -->
+<!-- Bootstrap JS -->
+<script src="js-bootstrap/bootstrap.bundle.js"></script>  
 
 
 </body>

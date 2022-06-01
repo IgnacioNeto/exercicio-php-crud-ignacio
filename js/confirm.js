@@ -11,7 +11,7 @@ links[i].addEventListener("click", function(event) {
     }
 });
 }
-
+// _______________________________________________________________
 function pegarNota(){
     let nota1 = document.getElementById('primeira').value;
     let nota2 = document.getElementById('segunda').value;
@@ -26,7 +26,7 @@ function pegarNota(){
     document.getElementById('situacao').value = novoResultado;
 
 }
-
+// _______________________________________________________________
 function verSituacao(resultado) {
     if(resultado >=7) {
         novoResultado = "Aprovado";
