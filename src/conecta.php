@@ -1,9 +1,15 @@
 <?php
-/* SCRIPT DE CONEXÃO AO SERVIDOR BANCO DE DADOS */
+/* SCRIPT DE CONEXÃO AO SERVIDOR BANCO DE DADOS LOCAL*/
+// $servidor = "localhost";
+// $usuario = "root";
+// $senha = "";
+// $banco = "crud_escola_ignacio";
+
+/* SCRIPT DE CONEXÃO AO SERVIDOR BANCO DE DADOS 000WebHost*/
 $servidor = "localhost";
-$usuario = "root";
-$senha = "";
-$banco = "crud_escola_ignacio";
+$usuario = "id19030174_ignacio";
+$senha = "rpq%)VKx8%JrMBF(";
+$banco = "id19030174_crud_escola_ignacio";
 
 try {
     // Criando a conexão com o MySQL (API/Driver de conexão)
